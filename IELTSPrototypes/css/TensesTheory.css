@@ -1,0 +1,97 @@
+h1,h2,h3{
+    font-weight: bold;
+}
+h1{
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+h2{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+h3{
+    margin-top: 20px;
+}
+.grammar_rules{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 3fr;
+    background-color: #fdfffc;
+}
+.grammar_rules_forms{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: #fdfffc;
+}
+.tense_examples{
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: #fdfffc;
+}
+.tense_examples div{
+    padding: 5px 10px;
+}
+.box {
+    color: #444;
+}
+
+.title {
+    text-align: center;
+    color:#b91372;
+}
+.words {
+    color: #558B2F;
+    font-weight: normal;
+}
+.words span{
+    display: block;
+}
+.verbs{
+    color: blue;
+    font-weight: normal;
+}
+.endings{
+    color: #c2b30a;
+    font-weight: normal; 
+}
+.object_list{
+    display: block;
+}
+.object{
+    color:#191363;
+    /* text-transform: uppercase; */
+    font-weight: normal;
+}
+.bg{
+    background-color: #ddd;
+}
+span.primary{
+    color: green;
+    /* padding: 5px; */
+    box-shadow: none;
+    font-weight: normal;
+}
+@media all and (max-width:800px){
+    h1{
+        margin-top: 20px;
+        margin-bottom: 0;
+    }
+
+    #simple_tenses{
+        max-width:100%;
+        font-size: 0.8rem;
+    }
+    #simple_tenses h1{
+        font-size: 1.6rem;
+    }
+    #simple_tenses h2{
+        font-size: 1.15rem;
+        font-weight: bold;
+    }
+    #simple_tenses h3{
+        font-size: 1rem;
+        font-weight: bold;
+    }
+}

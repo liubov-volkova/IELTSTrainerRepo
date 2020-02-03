@@ -1,0 +1,33 @@
+body {
+    margin: 40px;
+    font: 80% Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat( 7, minmax(170px, 1fr));
+    grid-template-rows: fit-content(10%);
+    background-color: #fff;
+    color: #fff;
+}
+
+.box {
+    padding: 25px;
+    font-size: 150%;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #444;
+    margin: auto;
+}
+
+.title {
+    text-align: center;
+    margin: auto;
+    font-weight: bold;
+}
+
+.words {
+    color: #558B2F;
+    font-weight: bold;
+}

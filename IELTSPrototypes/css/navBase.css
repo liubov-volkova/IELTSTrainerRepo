@@ -1,0 +1,34 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    background-color: #fdfffc;
+  }
+
+nav.navbar-dark {
+    padding:0;
+    background-color: #191363!important;
+
+}
+.nav-link{
+    color: #fdfffc!important;
+}
+div.navbar-brand{
+    padding:0; 
+    margin: 0;
+}
+#navbarMain{
+    padding-top:12px;
+    padding-bottom: 12px;
+}
+#navTogglerIELTSTrainer{
+    padding:12px!important;
+    background-color: #9a8d58;
+}
+.navbar-brand{
+    margin-right: 0px!important;
+}
+#eilts_email{
+    font-size: 170%;
+    padding: 0;
+}

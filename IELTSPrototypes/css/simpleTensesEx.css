@@ -1,0 +1,295 @@
+#main_settings button.btn-primary, .ex_button_default{
+    background-color: #618b9e!important;
+}
+#main_settings button.btn-primary:hover, .ex_button_default:hover{
+    background-color: #4e6f7e!important;
+}
+#generate_settings .card-body{
+    display: grid;
+    grid-gap:5px;
+    grid-template-columns: repeat(3,1fr);
+}
+#showSettings .radio, #shuffle-settings{
+    display: grid;
+    grid-gap:10px;
+    grid-template-columns: 1fr;
+}
+a.settings_ref{
+    text-transform: uppercase;
+    color:#918608;
+    font-weight: bold;
+    text-decoration: underline;
+}
+table.dataTable tbody th, table.dataTable tbody td{
+    padding: 5px!important;
+}
+
+@media all and (max-width:800px){
+    table td{
+        font-size: 0.8rem;
+    }
+    h1{
+        font-size: 150%;
+    }
+    h2{
+        font-size: 140%;
+    }
+    h3{
+        font-size: 120%;
+    }
+    #generate_settings .card-body{
+    display: block;
+    }
+}
+.btn-default.dropdown-toggle, .badge-default{
+    background-color: #618b9e!important;
+    padding: 10px!important;
+    margin-left: 5px;
+}
+.btn-default.dropdown-toggle:hover, .badge-default:hover{
+    background-color: #4e6f7e!important;
+}
+.card-footer{
+    background-color: transparent!important;
+}
+.verb-regular{
+    color:#618b9e;
+}
+.verb-irregular{
+    color:#000;
+}
+.ex_title_main_content{
+    display: grid;
+    grid-gap:5px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 30%;
+    grid-template-areas: "title" "desc" "button_go";
+}
+.ex_button_go{
+    grid-area: button_go;
+    justify-self: center;
+    margin-bottom: 10px;
+}
+.ex_button_do{
+    background-color: #191363!important;
+}
+ /*for ex 1, 2 tense block wrapper*/
+.tense_grid{
+    display: grid;
+    grid-gap:50px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    align-content: center;
+}
+.tense_grid input{
+    display: grid;
+    grid-gap:5px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    align-items: center;
+}
+@media all and (max-width: 1200px){
+    .tense_grid{
+        display: grid;
+        grid-gap:10px;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto;
+        align-content: center;
+    }
+}
+ /*for ex 1, 2 tense block end*/
+.base_text{
+    font-size: 100%;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #b91372!important;
+    padding:5px;
+    color:white;
+}
+#synthiser_block .form-check{
+    display: grid;
+    grid-gap:10px;
+    grid-template-columns: repeat(3,1fr);
+}
+#synthiser_block .form-check input{
+    width:100%;
+}
+div.hide_settings{
+    display: none;
+}
+div.show_settings{
+    display: block;
+}
+#execise_cards{
+    display:grid;
+    grid-gap:20px;
+    grid-template-columns: repeat(3,1fr);
+    font-family: Arial, Helvetica, sans-serif;
+    color: #191363;
+    margin: auto 20px;
+}
+@media all and (max-width:1200px){
+    #execise_cards{
+        display:grid;
+        grid-gap:20px;
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media all and (max-width:800px){
+    #execise_cards{
+        display:grid;
+        grid-gap:20px;
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+#execise_cards .card{
+    height: 100%;
+}
+#execise_cards .card{
+    height: 100%;
+}
+.rgba-grey-strong, .rgba-grey-strong:after{
+    background-color: rgba(253,255,252,0.8);
+    height: 100%;
+}
+a.btn-primary{
+    background-color: #191363!important;
+    color: #fdfffc;
+}
+.exercises h2{
+    margin-bottom: 10px!important;
+}
+.ex_block{
+    margin: 30px auto;
+}
+.ex_block .card{
+    margin-top: 30px;
+}
+.ex_desc_btn_name{
+    text-transform: uppercase;
+    font-weight: bold;
+    color:#b91372;
+}
+.ex_note{
+    margin-top: 1rem;
+    padding-top: 10px;
+    /* border-top: 1px dashed #ccc; */
+}
+.ex_note:before{
+    content: "notes: ";
+    text-transform: uppercase;
+    font-size: .8rem;
+}
+/*Ex 1*/
+.tense_3btn{
+    display: grid;
+    grid-gap:5px;
+    grid-template-columns: repeat(3,50px) 1fr;
+    margin: 10px auto;
+}
+#ex1{
+    display: grid;
+    grid-gap:5px;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: flex-start;
+}
+@media all and (max-width:800px){
+    .tense_3btn{
+        display: block;
+    } 
+    .tense_3btn input{
+        margin-top:15px;
+        width:100%;
+    } 
+}
+p.base_text{
+    color:white;
+    padding: 0 10px;
+}
+/* Ex 1 end*/
+/*Ex 2*/
+.tense_4btn{
+    display: grid;
+    grid-gap:5px;
+    grid-template-columns: repeat(4,50px) 1fr;
+    margin: 10px auto;
+}
+@media all and (max-width:800px){
+    .tense_4btn{
+        display: block;
+    } 
+    .tense_4btn input{
+        margin-top:15px;
+        width:100%;
+    } 
+}
+/* Ex 2 end*/
+/* Ex3 */
+#wlocaleName{
+    justify-self: center;
+    align-self: start;
+}
+.ex3_generate{
+    justify-self: start;
+    align-self: start;
+}
+/* Ex3 end */
+input[data-validity='correct']{
+    border:2px solid green;
+    background-color: rgba(143, 226, 148, 0.5);
+}
+input[data-validity='incorrect']{
+    border:2px solid red;
+    background-color: rgba(151, 97, 81, 0.5);
+}
+/*Ex 1 end*/
+/*Ex 3 write verbs*/
+#ex3_verb_inputs{
+    padding: 10px;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3,1fr);
+}
+.ex3_verb_header{
+    padding: 10px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 5fr;
+    align-items: start;
+    justify-items: start;
+}
+/* .ex3_verb_header .badge-primary, .ex3_verb_header span.base_text{
+    align-self: center;
+    justify-self: start;
+} */
+@media all and (max-width:1200px){
+    #ex3_verb_inputs{
+        padding: 10px;
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .ex3_verb_header{
+        padding: 10px;
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+/*Ex 3 write verbs end*/
+/*Settings */
+#speech_settings .card-body{
+    padding: 10px;
+    display: grid;
+    grid-gap: 50px;
+    grid-template-columns: repeat(3,1fr);
+}
+@media all and (max-width:1200px){
+    #speech_settings .card-body{
+        padding: 20px;
+        display: grid;
+        grid-gap: 0px;
+        grid-template-columns: repeat(1,1fr);
+    }
+}

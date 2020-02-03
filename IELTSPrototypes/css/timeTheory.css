@@ -1,0 +1,251 @@
+#time_theory h2{
+    font-weight: bold;
+}
+#time_theory h3{
+    font-weight: bold;
+}
+#time_theory h3{
+    margin: 40px auto 20px auto;
+}
+#time_theory ul, h3{
+    margin: 20px auto;
+}
+#time_theory ol{
+    padding-left: 10px;
+}
+#time_theory ol strong{
+   font-weight: bold;
+   color:#b91372;
+   text-transform: uppercase;
+}
+#time_theory ol, ol li ul{
+    padding-left: 15px;
+    margin: 0px 0px 10px 0px;
+}
+#time_theory table th{
+    font-weight: bold;
+    color:#b91372;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    padding: 5px 10px;
+    text-align: center!important;
+}
+#time_theory table td{
+    font-size: 1.2rem;
+    padding: 10px 10px;
+    line-height: 1.4rem;
+}
+#time_theory{
+    max-width:60%;
+    margin: 20px auto;
+    font-size: 1.2rem;
+}
+#prepositionsBlock .imgs img{
+    width:70%;
+}
+
+
+@media all and (max-width:800px){
+    #time_theory{
+        max-width:100%;
+        margin: 20px;
+        font-size: 0.8rem;
+    }
+    #time_theory h1{
+        font-size: 1.3rem;
+    }
+    #time_theory h2{
+        font-size: 1.15rem;
+        font-weight: bold;
+    }
+    #time_theory h3{
+        font-size: 1rem;
+        font-weight: bold;
+    }
+    #time_theory h3{
+        margin: 40px auto 20px auto;
+    }
+    #time_theory ul, h3{
+        margin: 20px auto;
+    }
+    #time_theory ol{
+        padding-left: 10px;
+    }
+    #time_theory ol strong{
+       font-weight: bold;
+       color:#b91372;
+       text-transform: uppercase;
+    }
+    #time_theory ol, ol li ul{
+        padding-left: 15px;
+        margin: 0px 0px 10px 0px;
+    }
+    #time_theory table th{
+        font-weight: bold;
+        color:#b91372;
+        font-size: 0.7rem;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        line-height: 1rem;
+        padding: 5px;
+        text-align: center!important;
+    }
+    #time_theory table td{
+        padding: 5px;
+        font-size: 0.7rem;
+        line-height: 1.2rem;
+    }
+   
+    #prepositionsBlock .imgs img{
+        width:100%;
+    }
+    .card-body{
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: 1fr;
+        grid-template-areas: "imgs" "table";
+        background-color:#fdfffc!important;
+    }
+    .card-body table{
+        grid-area: table;
+    }
+    .card-body table th,.card-body table td{
+        text-align: left;
+    }
+    .card-body .imgs{
+        grid-area: imgs;
+    }
+    .card-body .imgs img{
+        padding: 0px 20px 0px 20px;
+    }
+}
+
+.text-info{
+    color:#b91372!important;
+}
+.text-primary-bold{
+    color:#191363!important;
+    font-weight: bold;
+}
+.text-primary{
+    color:#191363!important;
+}
+.examples{
+    width:70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media all and (max-width:1200px){
+    .examples{
+        width:100%;
+    }
+    #prepositionsBlock .imgs img{
+        width:100%;
+    }
+}
+
+.card-body{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr;
+    grid-template-areas: "imgs" "table";
+    background-color:#fdfffc!important;
+    justify-items: center;
+    align-items: center;
+}
+.card-body table{
+    grid-area: table;
+}
+.card-body table th,.card-body table td{
+    text-align: left;
+}
+.card-body .imgs{
+    grid-area: imgs;
+}
+.card-body .imgs img{
+    padding: 0px 20px 0px 20px;
+}
+#oClockBlock .card-body{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr;
+}
+
+#oClockBlock .card-body div.exampleBlock{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: "img table";
+}
+#oClockBlock .card-body div.exampleBlock table{
+    grid-area: table;
+}
+
+#oClockBlock .card-body div.exampleBlock img{
+    grid-area: img;
+}
+@media all and (max-width:1200px){
+    #oClockBlock .card-body div.exampleBlock{
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 1fr;
+        grid-template-areas: "img" "table";
+        align-items: center;
+        justify-items: center;
+    }
+    .card-body {
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+        padding: 0 1rem;
+    }
+    #oClockBlock .card-body div.exampleBlock img{
+       width:70%;
+       padding: 0;
+    }
+}
+#prepositionsBlock .card-body{
+    display:block;
+    text-align: center;
+}
+#prepositionsBlock img{
+    width:100%;
+    height: auto;
+}
+/*For navigation*/
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    background-color: #fdfffc;
+  }
+
+nav.navbar-dark {
+    padding:0;
+    background-color: #191363!important;
+
+}
+.nav-link{
+    color: #fdfffc!important;
+}
+div.navbar-brand{
+    padding:0; 
+    margin: 0;
+}
+#navbarMain{
+    padding-top:12px;
+    padding-bottom: 12px;
+}
+#navTogglerIELTSTrainer{
+    padding:12px!important;
+    background-color: #9a8d58;
+}
+.navbar-brand{
+    margin-right: 0px!important;
+}
+#eilts_email{
+    font-size: 170%;
+    padding: 0;
+}
+/*For navigation end*/

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <title>IELTS Trainer. Simple tenses (practice)</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/mdb.min.css">
+    <link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css"/> 
+    <link rel="stylesheet" href="css/navBase.css">
+    <link rel="stylesheet" href="css/simpleTensesEx.css">
+ 
+    <script src="js/jquery-3.3.1.min.js"></script>       
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="DataTables/datatables.min.js"></script> 
+    <script src="js/mdb.min.js"></script>
+    <script src="js/simpleTensesExs.js"></script>
+  </head>
+
+  <body>
+        <div id="root" class="mb-4">
+            <nav id="navbarMain" class="navbar navbar-expand-lg navbar-dark indigo">
+                <a class="navbar-brand" href="navBase.html">
+                    <img src="imgs/IELTSTrainerPrototypesLogo.png" alt="IELTS Trainer. Time">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navTogglerIELTSTrainer"
+                    aria-controls="navTogglerIELTSTrainer" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navTogglerIELTSTrainer">
+                    <ul class="navbar-nav mr-auto mt-lg-0">
+                        <li class="nav-item mr-2">
+                            <a class="nav-link" href="SimpleTensesGrammar.html">Simple tenses (grammar)</a>
+                        </li>                        
+                        <li class="nav-item mr-2 active">
+                            <a class="nav-link" href="SimpleTensesExs.html">Simple tenses (practice)</a>
+                        </li>
+                        <li class="nav-item mr-2">
+                            <a class="nav-link" href="TimeGrammar.html">Time (grammar)</a>
+                        </li>
+                        <li class="nav-item mr-2">
+                            <a class="nav-link" href="TimeExs.html">Time (practice)</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ml-auto nav-flex-icons">
+                        <li class="nav-item">
+                            <a id="eilts_email" href="mailto:volkova-l-v@yandex.ru" title="send e-mail to Volkova Liubov" class="nav-link waves-effect waves-light">
+                                    &#x2709;
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <heder id="top">
+            <h1 class="mb-5 text-center">IELTS. Simple tenses (practice)</h1>
+        </heder>
+        <div id="main_settings" class="">
+            <button type="button" id="startTraining" class="btn btn-primary ml-3" onclick="JSUtiles.ShowHideSettings(this)"><span class="mr-2">&#9881;</span> Settings</button>
+            <div id="all_settings" class="hide_settings container">
+                <div class="text-center">
+                    <div id="generate_settings">
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                General settings
+                            </div>
+                            <div class="card-body">
+                                <div id="wlocaleName" class="input-group">
+                                    <input id="localeName" type="text" disabled class="form-control" aria-label="" value="English">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-default btn-md m-0 px-3 py-2 z-depth-0 dropdown-toggle" type="button"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Translate to</button>
+                                        <div id="speech_dialect_links" class="dropdown-menu dropdown-menu-right">
+                                            <a class="dropdown-item" href="#generate_settings" data-browser-lang="en-EN" onClick="JSUtiles.setLocale(this)">English</a>
+                                            <a class="dropdown-item" href="#generate_settings" data-browser-lang="ru-Ru" onClick="JSUtiles.setLocale(this)">Russian</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="showSettings">
+                                    <div class="mb-4 text-center">
+                                        <div class="radio">
+                                            <lable data-val="show_verb" onclick="ExerciseUtils.changeVerbShowSettings(this)">
+                                                <input id="show_verb" data-val="show_verb" class="ml-4 mr-2" type="radio" name="ex3_radios" checked onchange="ExerciseUtils.changeVerbShowSettings(this)">Show english verb
+                                            </lable>
+                                            <lable data-val="show_translation" onclick="ExerciseUtils.changeVerbShowSettings(this)">
+                                                <input id="show_translation" data-val="show_translation" class="ml-4 mr-2" type="radio" name="ex3_radios" onchange="ExerciseUtils.changeVerbShowSettings(this)">Show translation
+                                            </lable>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="shuffle-settings">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="shuffle_tenses" onchange="JSUtiles.setShuffleTensesSettings(this)">
+                                        <label class="form-check-label" for="shuffle_tenses" onclick="JSUtiles.setShuffleTensesSettings(this)">Shuffle tenses</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" checked class="form-check-input" id="shuffle_verbs" onchange="JSUtiles.setShuffleVerbsSettings(this)">
+                                        <label class="form-check-label" for="shuffle_verbs" onclick="JSUtiles.setShuffleTensesSettings(this)">Shuffle verbs</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="speech_settings">
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                Speech settings
+                            </div>
+                            <div class="card-body">
+                                <div id="speech_list" class="my-3">
+                                    <div id="wSpeechDialectName" class="input-group">
+                                        <input id="speechDialectName" type="text" disabled class="form-control" aria-label="" value="United Kingdom">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-default btn-md m-0 px-3 py-2 z-depth-0 dropdown-toggle" type="button"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Language</button>
+                                            <div id="speech_dialect_links" class="dropdown-menu dropdown-menu-right">
+                                                <a class="dropdown-item" href="#speech_settings" data-dialect="en-GB" onClick="JSUtiles.setSpeechDialect(this)">United Kingdom</a>
+                                                <a class="dropdown-item" href="#speech_settings" data-dialect="en-US" onClick="JSUtiles.setSpeechDialect(this)">United States</a>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                </div>
+                                <div id="synthiser_block">
+                                    <div class="form-check">
+                                        <label class="form-check-label text-right" for="rate">Rate</label>
+                                        <input type="range" min="0.5" max="2" value="1" step="0.1" id="rate" onChange="JSUtiles.changePitchOrRate(this)">
+                                        <span class="rate-value mx-2 text-left">1</span>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label text-right" for="pitch">Pitch</label>
+                                        <input type="range" min="0.4" max="2" value="1" step="0.1" id="pitch" onChange="JSUtiles.changePitchOrRate(this)">
+                                        <span class="pitch-value mx-2 text-left">1</span>
+                                    </div>
+                                </div>
+                                <div id="voice_list" class="my-3">
+                                    <div id="wVoiceName" class="input-group">
+                                        <input id="voiceName" type="text" disabled class="form-control" aria-label="" value="">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-default btn-md m-0 px-3 py-2 z-depth-0 dropdown-toggle" type="button"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Voice</button>
+                                            <div id="voice_links" class="dropdown-menu dropdown-menu-right">
+                                            </div>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="verb_list">
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                Verb list
+                                <!-- <button type="button" id="startTraining" class="btn btn-primary" onclick="JSUtiles.startTraining()">Start training</button> -->
+                            </div>
+                            <div class="card-body">
+                                <div id="verb_topic_list" class="my-3">
+                                    <div id="wTopicName" class="input-group">
+                                        <input id="topicName" type="text" disabled class="form-control" aria-label="Text input with dropdown button">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-default btn-md m-0 px-3 py-2 z-depth-0 dropdown-toggle" type="button"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Topic</button>
+                                            <div id="topic_links" class="dropdown-menu dropdown-menu-right">
+                                                <!--<a class="dropdown-item" href="#">topic name</a>-->
+                                            </div>
+                                        </div>
+                                    </div> 
+                                </div>
+                                <div id="words_to_train_block">
+                                    <table id="verb_tbl">
+                                        <thead>
+                                            <tr>
+                                                <!-- <th>
+                                                    <div class="form-check">
+                                                        <input type="checkbox" checked class="form-check-input" data-id="${verb.id}" id="check_all" onChange="JSUtiles.checkAllverbs(this)">
+                                                    </div>
+                                                </th> -->
+                                                <th>V1</th>
+                                                <th>V2</th>
+                                                <th>V3</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="exercise_list" class="my-3">
+            <h1 class="text-center">Exercise List</h1>
+            <div id="execise_cards">
+            </div>
+        </div>
+        <div id="exercises" class="container my-3">
+            <h1 class="text-center">Exercises</h1>
+        </div>
+        <div id="ex3_tenses_say">
+            <div id="ex3_verbs">
+            </div>
+        </div>
+    </div>
+  </body>
+</html>
+
